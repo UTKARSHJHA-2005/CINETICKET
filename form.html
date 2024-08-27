@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="logomovie.jpg">
+  <title>CineTicket</title>
+</head>
+<style>
+  body {
+    background-color: whitesmoke;
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f4f4f4;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #ECDFCC;
+    border-radius: 10px;
+    border: 3px solid #f4f4f4;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+
+  .theater-container {
+    width: 100%;
+  }
+
+  .theater-container h1 {
+    text-align: center;
+  }
+
+  .theaters {
+    display: none;
+  }
+
+  .theater {
+    justify-content: space-around;
+  }
+
+  .theater-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 10px;
+    background-color: lightcyan;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  label {
+    font-size: 20px;
+  }
+
+  .book {
+    text-align: center;
+  }
+
+  .theater1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .theater1 a {
+    text-decoration: none;
+  }
+
+  .dates {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-left: 60px;
+  }
+
+  .date1 {
+    font-size: large;
+    color: green;
+    border: 2px solid green;
+    background-color: white;
+  }
+
+  .date1:hover {
+    color: black;
+    cursor: pointer;
+    background-color: lightgreen;
+  }
+
+  input {
+    width: 200px;
+    height: 25px;
+    font-size: 20px;
+    font-weight: 200;
+    border-radius: 20px;
+    border: 2px solid brown;
+  }
+
+  .show {
+    display: block;
+  }
+</style>
+
+<body>
+  <div class="theater-container">
+    <h1>Select The Date <span id="selected-movie"></span></h1>
+    <div class="book">
+      <label for="bookingDate" class="block text-sm font-medium
+                  form-label text-gray-700">
+        Booking Date:
+      </label>
+      <input type="date" id="bookingDate" name="bookingDate" class="w-full border rounded-md p-2
+                  form-input focus:outline-none
+                  focus:ring-2 focus:ring-blue-500
+                  focus:border-transparent" required>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="theaters" id="content">
+      <div class="theater">
+        <div class="theater1">
+          <button class="theater-button" data-theater="Theater 1">G3S, Rohini Sec-11</button>
+          <div class="dates" style="margin-left: 63px;">
+            <a href="seat.html">
+              <div class="date1">9:45 A.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">10:30 A.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">11:45 A.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">12:00 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">5:25 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">7:20 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">8:00 P.M</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="theater">
+        <div class="theater1">
+          <button class="theater-button" data-theater="Theater 1">M2K, Rohini Sec-3</button>
+          <div class="dates" style="margin-left: 69px;">
+            <a href="seat.html">
+              <div class="date1">9:30 A.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">11:20 A.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">12:00 A.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">2:30 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">4:30 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">7:15 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">8:10 P.M</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="theater">
+        <div class="theater1">
+          <button class="theater-button" data-theater="Theater 1">PVR, Rohini Sec-14</button>
+          <div class="dates">
+            <a href="seat.html">
+              <div class="date1">10:45 A.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">12:00 A.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">2:40 A.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">5:30 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">6:40 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">7:05 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">8:35 P.M</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="theater">
+        <div class="theater1">
+          <button class="theater-button" data-theater="Theater 1">CinePolis, Sec-10</button>
+          <div class="dates" style="margin-left: 75px;">
+            <a href="seat.html">
+              <div class="date1">11:45 A.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">1:30 A.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">3:45 A.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">4:00 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">5:10 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">6:30 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">7:35 P.M</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="theater">
+        <div class="theater1">
+          <button class="theater-button" data-theater="Theater 1">IMAX, Sec-20</button>
+          <div class="dates" style="margin-left: 75px;">
+            <a href="seat.html">
+              <div class="date1">11:25 A.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">1:15 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">2:15 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">3:00 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">5:00 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">5:50 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">8:35 P.M</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="theater">
+        <div class="theater1">
+          <button class="theater-button" data-theater="Theater 1">Dynamic, Sec-25</button>
+          <div class="dates" style="margin-left: 75px;">
+            <a href="seat.html">
+              <div class="date1">1:55 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">2:50 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">4:25 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">6:00 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">8:05 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">9:00 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">9:25 P.M</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="theater">
+        <div class="theater1">
+          <button class="theater-button" data-theater="Theater 1">StarLight, Sec-07</button>
+          <div class="dates" style="margin-left: 75px;">
+            <a href="seat.html">
+              <div class="date1">10:25 A.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">11:30 A.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">1:40 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">3:20 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">4:15 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">8:25 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">9:35 P.M</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="theater">
+        <div class="theater1">
+          <button class="theater-button" data-theater="Theater 1">Tara, Sec-06</button>
+          <div class="dates" style="margin-left: 75px;">
+            <a href="seat.html">
+              <div class="date1">12:45 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">2:40 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">3:40 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">4:00 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">6:10 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">8:40 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">9:00 P.M</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="theater">
+        <div class="theater1">
+          <button class="theater-button" data-theater="Theater 1">AAA, Sec-12</button>
+          <div class="dates" style="margin-left: 75px;">
+            <a href="seat.html">
+              <div class="date1">11:40 A.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">1:45 A.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">3:55 A.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">4:15 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">5:15 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">6:25 P.M</div>
+            </a>
+            &nbsp;
+            &nbsp;
+            <a href="seat.html">
+              <div class="date1">8:35 P.M</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script>
+    const bookDate = document.getElementById('bookingDate');
+    const contentDiv = document.getElementById('content');
+    bookDate.addEventListener('change', () => {
+      contentDiv.classList.add('show');
+    });
+  </script>
+</body>
+
+</html>

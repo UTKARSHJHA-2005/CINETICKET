@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="logomovie.jpg">
+  <title>Seat Reservation</title>
+</head>
+<style>
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    perspective: 1000px;
+    margin-bottom: 30px;
+  }
+
+  .container2 {
+    perspective: 1000px;
+    margin-bottom: 30px;
+  }
+
+  .screen {
+    background-color: grey;
+    border-radius: 30%;
+    height: 10px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .seat {
+    background-color: #34495e;
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .seat.selected {
+    background-color: #3498db;
+    transform: scale(1.1);
+  }
+
+  .seat.occupied {
+    background-color: #7f8c8d;
+    cursor: not-allowed;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .info p {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 5px;
+    color: #ecf0f1;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #c0392b;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="screen"></div>
+    <div class="row" data-price="250">
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat"></div>
+      &emsp;&emsp;
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      &emsp;&emsp;
+      <div class="seat"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat"></div>
+    </div>
+    <div class="row" data-price="250">
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat"></div>
+      &emsp;&emsp;
+      <div class="seat"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat"></div>
+      &emsp;&emsp;
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+    </div>
+    <div class="row" data-price="250">
+      <div class="seat"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      &emsp;&emsp;
+      <div class="seat"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      &emsp;&emsp;
+      <div class="seat"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+    </div>
+    <div class="row" data-price="250">
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat"></div>
+      &emsp;&emsp;
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat" style="background-color: green;"></div>
+      &emsp;&emsp;
+      <div class="seat"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+    </div>
+    <div class="row" data-price="250">
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      &emsp;&emsp;
+      <div class="seat"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      &emsp;&emsp;
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+      <div class="seat" style="background-color: green;"></div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row" data-price="450">
+    <div class="seat" style="background-color: green;"></div>
+    <div class="seat" style="background-color: green;"></div>
+    <div class="seat"></div>
+    &emsp;&emsp;
+    <div class="seat" style="background-color: green;"></div>
+    <div class="seat"></div>
+    <div class="seat" style="background-color: green;"></div>
+    <div class="seat"></div>
+    <div class="seat" style="background-color: green;"></div>
+    <div class="seat" style="background-color: green;"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat" style="background-color: green;"></div>
+    <div class="seat" style="background-color: green;"></div>
+    <div class="seat" style="background-color: green;"></div>
+    &emsp;&emsp;
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat" style="background-color: green;"></div>
+  </div>
+  <div class="row" data-price="450">
+    <div class="seat" style="background-color: green;"></div>
+    <div class="seat" style="background-color: green;"></div>
+    <div class="seat"></div>
+    &emsp;&emsp;
+    <div class="seat" style="background-color: green;"></div>
+    <div class="seat" style="background-color: green;"></div>
+    <div class="seat" style="background-color: green;"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat" style="background-color: green;"></div>
+    <div class="seat"></div>
+    <div class="seat" style="background-color: green;"></div>
+    <div class="seat"></div>
+    <div class="seat" style="background-color: green;"></div>
+    <div class="seat" style="background-color: green;"></div>
+    <div class="seat"></div>
+    &emsp;&emsp;
+    <div class="seat" style="background-color: green;"></div>
+    <div class="seat" style="background-color: green;"></div>
+    <div class="seat"></div>
+  </div>
+  <div class="info">
+    <p>You have selected <span id="count">0</span> seats for a total of Rs<span id="total">0</span></p>
+    <a href="payment.html"><button class="btn">Confirm Booking</button></a>
+  </div>
+
+  <script>
+    const seats = document.querySelectorAll('.seat');
+    const totalDisplay = document.getElementById('total');
+    const count = document.getElementById('count');
+
+    let total = 0;
+    seats.forEach(seat => {
+      seat.addEventListener('click', () => {
+        const row = seat.parentElement;
+        const price = parseInt(row.getAttribute('data-price'));
+        if (seat.classList.contains('selected')) {
+          seat.classList.remove('selected');
+          total -= price;
+        } else {
+          seat.classList.add('selected');
+          total += price;
+        }
+        const selectedSeats = document.querySelectorAll('.row .seat.selected');
+        const selectedSeatsCount = selectedSeats.length;
+        count.innerText = selectedSeatsCount;
+        totalDisplay.textContent = `₹${total}`;
+      });
+    });
+  </script>
+</body>
+
+</html>

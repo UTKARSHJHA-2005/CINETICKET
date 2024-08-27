@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="logomovie.jpg">
+  <title>CineTicket</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+
+<body>
+  <header class="header">
+    <section class="flex">
+      <a href="book.html" class="logo"> CineTicket</a>
+      <input type="text" placeholder="Search the movie name you want to watch">
+      <a href="#" class="loc">Location</a>
+      <a href="#" class="login">Login</a>
+      <a href="#" class="btn">Contact Us</a>
+    </section>
+  </header>
+  <div class="flex2">
+    <a href="book.html" class="home" style="margin-left: 20px;">Home</a>
+    <a href="book-home.html">About Us</a>
+    <a href="book-theatre.html">Theatres</a>
+    <a href="" class="offer" style="margin-left: 900px;">Offers</a>
+  </div>
+  <div class="carousel" style="height: 320px">
+    <div class="carousel-item active">
+      <img src="kaam.avif" alt="Image 1">
+    </div>
+    <div class="carousel-item">
+      <img src="ad.png" alt="Image 2">
+    </div>
+    <div class="carousel-item">
+      <img src="ads2.webp" alt="Image 3">
+    </div>
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <button class="next" onclick="changeSlide(1)">❯</button>
+  </div>
+  <div class="carousel-dots">
+    <span class="dot active" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  <br>
+  <div class="movies">
+    <p style="font-style: oblique;">Trending Movies</p>
+    <div class="card-carousel">
+      <button class="prev-button" onclick="scrollPrev()">❮</button>
+      <a href="form.html"><div class="card-container">
+        <div class="card">
+          <div class="image-container">
+            <img src="MV5BYzM2NGMzNGQtZjNhMi00MTVkLTg2ZGQtN2M4OTllYzU1Y2Y0XkEyXkFqcGc@._V1_.jpg" alt="Card 1"
+              class="card-image">
+          </div>
+          <div class="card-content">
+            <p class="card-description" style="font-size: 30px;font-weight: 400; float: left;">★8.2/10</p>
+            <p class="card-description" style="font-size: 25px; float: left;">Drama/Romantic</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="kill.jpg" alt="Card 1" class="card-image">
+          </div>
+          <div class="card-content">
+            <p class="card-description" style="font-size: 30px;font-weight: 400; float: left;">★7.7/10</p>
+            <p class="card-description" style="font-size: 25px; float: left;">Action/Crime/Thriller</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="stree.jpg" alt="Card 1" class="card-image">
+          </div>
+          <div class="card-content">
+            <p class="card-description" style="font-size: 30px;font-weight: 400; float: left;">★9.1/10</p>
+            <p class="card-description" style="font-size: 28px; float: left;">Horror/Comedy</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="deadpool_wolverine_mobile_640x480_ad8020fd.jpg" alt="Card 3" class="card-image">
+          </div>
+          <div class="card-content">
+            <p class="card-description" style="font-size: 30px;font-weight: 400; float: left;">★8.7/10</p>
+            <p class="card-description" style="font-size: 24px; float: left;">Action/Adventure/Comedy</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="khel.jpg" alt="Card 2" class="card-image">
+          </div>
+          <div class="card-content">
+            <p class="card-description" style="font-size: 30px;font-weight: 400; float: left;">★8.3/10</p>
+            <br>
+            <p class="card-description" style="font-size: 28px; float: left;">Drama/Comedy</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="kalki.jpg" alt="Card 1" class="card-image">
+          </div>
+          <div class="card-content">
+            <p class="card-description" style="font-size: 30px;font-weight: 400;  float: left;">★8.6/10</p>
+            <p class="card-description" style="font-size: 25px; float: left;">Action/Sci-fi/Thriller</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="vedaa.jpg" alt="Card 1" class="card-image">
+          </div>
+          <div class="card-content">
+            <p class="card-description" style="font-size: 30px; font-weight: 400;float: left;">★8.1/10</p>
+            <p class="card-description" style="font-size: 30px; float: left;">Action/Drama</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="double-ismart.jpg" alt="Card 1" class="card-image">
+          </div>
+          <div class="card-content">
+            <p class="card-description" style="font-size: 30px;font-weight:400;  float: left;">★6.8/10</p>
+            <p class="card-description" style="font-size: 28px; float: left;">Action/Sci-fi/Thriller</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="vazaha.jpg" alt="Card 1" class="card-image">
+          </div>
+          <div class="card-content">
+            <p class="card-description" style="font-size: 30px;font-weight:400;  float: left;">★9.1/10</p>
+            <p class="card-description" style="font-size: 28px; float: left;">Comedy/Drama</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="inside.jpg" alt="Card 1" class="card-image">
+          </div>
+          <div class="card-content">
+            <p class="card-description" style="font-size: 30px;font-weight:400;  float: left;">★9.2/10</p>
+            <p class="card-description" style="font-size: 28px; float: left;">Animation/Comedy/Drama</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="despicable.jpg" alt="Card 1" class="card-image">
+          </div>
+          <div class="card-content">
+            <p class="card-description" style="font-size: 30px;font-weight:400;  float: left;">★6.8/10</p>
+            <p class="card-description" style="font-size: 28px; float: left;">Action/Sci-fi/Thriller</p>
+          </div>
+        </div>
+      </div></a>
+      <button class="next-button" onclick="scrollNext()">❯</button>
+    </div>
+  </div>
+  <div class="movies">
+    <p style="font-style: oblique;">Re-Release</p>
+    <div class="card-carousel2">
+      <button class="prev-button1" onclick="scrollPrev2()">❮</button>
+      <a href="form.html"><div class="card-container2">
+        <div class="card2">
+          <div class="image-container2">
+            <img src="rock.jpg" alt="Card 1" class="card-image">
+          </div>
+        </div>
+        <div class="card2">
+          <div class="image-container2">
+            <img src="rab.jpg" alt="Card 1" class="card-image">
+          </div>
+        </div>
+        <div class="card2">
+          <div class="image-container2">
+            <img src="yjhd.jpg" alt="Card 1" class="card-image">
+          </div>
+        </div>
+        <div class="card2">
+          <div class="image-container2">
+            <img src="tum.jpg" alt="Card 3" class="card-image">
+          </div>
+        </div>
+        <div class="card2">
+          <div class="image-container2">
+            <img src="laila.jpg" alt="Card 2" class="card-image">
+          </div>
+        </div>
+        <div class="card2">
+          <div class="image-container2">
+            <img src="Jodhaa_akbar.jpg" alt="Card 1" class="card-image">
+          </div>
+        </div>
+        <div class="card2">
+          <div class="image-container2">
+            <img src="main.jpg" alt="Card 1" class="card-image">
+          </div>
+        </div>
+        <div class="card2">
+          <div class="image-container2">
+            <img src="dhoni.jpg" alt="Card 1" class="card-image">
+          </div>
+        </div>
+      </div></a>
+      <button class="next-button2" onclick="scrollNext2()">❯</button>
+    </div>
+  </div>
+  <div class="movies">
+    <p style="font-style: oblique;">Priemered Movies</p>
+    <div class="card-carousel3">
+      <button class="prev-button3" onclick="scrollPrev3()">❮</button>
+      <a href="form.html"><div class="card-container3">
+        <div class="card3">
+          <div class="image-container3">
+            <img src="spe.jpg" alt="Card 1" class="card-image">
+          </div>
+        </div>
+        <div class="card3">
+          <div class="image-container3">
+            <img src="push.jpg" alt="Card 1" class="card-image">
+          </div>
+        </div>
+        <div class="card3">
+          <div class="image-container3">
+            <img src="dev.jpg" alt="Card 1" class="card-image">
+          </div>
+        </div>
+        <div class="card3">
+          <div class="image-container3">
+            <img src="live.jpg" alt="Card 3" class="card-image">
+          </div>
+        </div>
+        <div class="card3">
+          <div class="image-container3">
+            <img src="here.jpg" alt="Card 2" class="card-image">
+          </div>
+        </div>
+        <div class="card3">
+          <div class="image-container3">
+            <img src="great.jpg" alt="Card 1" class="card-image">
+          </div>
+        </div>
+        <div class="card3">
+          <div class="image-container3">
+            <img src="night.jpg" alt="Card 1" class="card-image">
+          </div>
+        </div>
+        <div class="card3">
+          <div class="image-container3">
+            <img src="con.jpg" alt="Card 1" class="card-image">
+          </div>
+        </div>
+        <div class="card3">
+          <div class="image-container3">
+            <img src="bag.jpg" alt="Card 1" class="card-image">
+          </div>
+        </div>
+        <div class="card3">
+          <div class="image-container3">
+            <img src="arm.cms" alt="Card 1" class="card-image">
+          </div>
+        </div>
+        <div class="card3">
+          <div class="image-container3">
+            <img src="trans.jpg" alt="Card 1" class="card-image">
+          </div>
+        </div>
+      </div></a>
+      <button class="next-button3" onclick="scrollNext3()">❯</button>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-content">
+      <div class="logo">
+        <img src="logomovie.jpg" alt="CineTicket Logo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Movies</a></li>
+          <li><a href="#">Theatres</a></li>
+        </ul>
+      </nav>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>  
+      </div>
+    </div>
+    <div class="copyright"> 
+      &copy; 2024 CineTicket. All rights reserved.
+    </div>
+  </footer>
+  <script src="book.js"></script>
+</body>
+
+</html>
