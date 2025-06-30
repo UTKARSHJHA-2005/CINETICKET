@@ -26,5 +26,5 @@ git clone https://github.com/UTKARSHJHA-2005/CINETICKET.git
 cd CINETICKET
 </pre>
 <br/>
-2) Open <pre>index.html</pre>.<br/>
+2) Open <pre>index.html</pre><br/>
 3) Click the Live Server button(if using VS Code).
