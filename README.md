@@ -1,5 +1,6 @@
 # 🎥CINETICKET 🎬<br/>
 A responsive and interactive web-based cinema ticket booking system built with HTML, CSS, and JavaScript. Users can browse available movies, select showtimes, choose seats, and book tickets with a simple and intuitive interface.<br/>
+<br/>
 ✨<strong>Key Features:</strong><br/>
 🎞️ Movie selection with posters and showtimes.<br/>
 💺Dynamic seat selection with real-time availability.<br/>
